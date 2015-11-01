@@ -1,0 +1,25 @@
+@import url(https://fonts.googleapis.com/css?family=Stardos+Stencil);
+
+
+body {
+	margin:0px;
+}
+
+
+
+
+#triangle{ 
+	width: 0; 
+	height: 100; 
+	border-left: 80px solid transparent; 
+	border-right: 80px solid transparent; 
+	border-bottom: 160px solid #F39200; 
+	position: absolute;
+    top:25%;
+    left:320px;
+
+}
+
+
+
+

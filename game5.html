@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- <script src="http://static.jsbin.com/js/render/edit.js?3.35.2"></script> for editing in js-->
+		<!-- <script>jsbinShowEdit && jsbinShowEdit({"static":"http://static.jsbin.com","root":"http://jsbin.com"});</script> -->
+
+
+
+<style>
+.container{
+	position:absolute;
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+}
+.pop{
+	width:100px;
+	height:100px;
+	border-radius:50px;
+	position: absolute;
+
+}
+.pop.one{
+	background:pink;
+}
+.pop.two{
+	background:pink;
+	left:100px;
+}
+.pop.three{
+	background:pink;
+	position: absolute;
+	left:200px;
+}
+.pop.four{
+	background:pink;
+	top:100px;
+}
+.pop.five{
+	background:pink;
+	top:100px;
+	left:100px;
+}
+.pop.six{
+	background:pink;
+	top:100px;
+	left:200px;
+}
+.pop.seven{
+	background:pink;
+	top:200px;
+}
+.pop.eight{
+	background:pink;
+	top:200px;
+	left:100px;
+}
+.pop.nine{
+	background: pink;
+	top:200px;
+	left:200px;
+}
+.pop.ten{
+	background: pink;
+	top:300px;
+}
+.pop.eleven{
+	background: pink;
+	top:300px;
+	left:100px;
+}
+.pop.twelve{
+	background: pink;
+	top:300px;
+	left:200px;
+}
+.pop.thirteen{
+	background: pink;
+	top:300px;
+	left:300px;
+}
+.pop.fourteen{
+	background: pink;
+	top:300px;
+	left:400px;
+}
+.pop.fifteen{
+	background: pink;
+	top:300px;
+	left:500px;
+}
+.pop.sixteen{
+	background: pink;
+	left:300px;
+}
+.pop.seventeen{
+	background: pink;
+	top:100px;
+	left:300px;
+}
+.pop.eighteen{
+	background: pink;
+	top:200px;
+	left:300px;
+}
+.pop.nineteen{
+	background: pink;
+	left:400px;
+}
+.pop.twenty{
+	background: pink;
+	top:100px;
+	left:400px;
+}
+.pop.twentyone{
+	background: pink;
+	top:200px;
+	left:400px;
+}
+
+.pop.twentytwo{
+	background: pink;
+	left:500px;
+}
+
+.pop.twentythree{
+	background: pink;
+	top:100px;
+	left:500px;
+}
+
+.pop.twentyfour{
+	background: pink;
+	top:200px;
+	left:500px;
+}
+.pop.twentyfive{
+	background: pink;
+	top:400px;
+}
+.pop.twentysix{
+	background: pink;
+	top:400px;
+	left:100px;
+}
+.pop.twentyseven{
+	background: pink;
+	top:400px;
+	left:200px;
+}
+.pop.twentyeight{
+	background: pink;
+	top:400px;
+	left:300px;
+}
+.pop.twentynine{
+	background: pink;
+	top:400px;
+	left:400px;
+}
+.pop.thirty{
+	background: pink;
+	left:500px;
+	top:400px;
+}
+
+	
+	#counter{
+			width:10%;
+			text-align:center;
+			float:right;
+	}
+
+</style>
+
+
+		</script>
+	</head>
+	
+
+	<body>
+	<div class="container">
+		<div class="one pop"></div>
+		<div class="two pop"></div>
+		<div class="three pop"></div>
+		<div class="four pop"></div>
+		<div class="five pop"></div>
+		<div class="six pop"></div>
+		<div class="seven pop"></div>
+		<div class="eight pop"></div>
+		<div class="nine pop"></div>
+		<div class="ten pop"></div>
+		<div class="eleven pop"></div>
+		<div class="twelve pop"></div>
+		<div class="thirteen pop"></div>
+		<div class="fourteen pop"></div>
+		<div class="fifteen pop"></div>
+		<div class="sixteen pop"></div>
+		<div class="seventeen pop"></div>
+		<div class="eighteen pop"></div>
+		<div class="nineteen pop"></div>
+		<div class="twenty pop"></div>
+		<div class="twentyone pop"></div>
+		<div class="twentytwo pop"></div>
+		<div class="twentythree pop"></div>
+		<div class="twentyfour pop"></div>
+		<div class="twentyfive pop"></div>
+		<div class="twentysix pop"></div>
+		<div class="twentyseven pop"></div>
+		<div class="twentyeight pop"></div>
+		<div class="twentynine pop"></div>
+		<div class="thirty pop"></div>
+
+	</div>
+
+	<div id="counter">foo</div>
+		
+
+<script>
+
+
+
+
+var pop = document.getElementsByClassName("pop");
+var randompop = Math.floor( (Math.random() * pop.length) );
+
+var safeColors = ['00','33','66','99','cc','ff'];
+
+	var rand = function() {
+	    return Math.floor(Math.random()*6);
+	};
+
+		var randomColor = function() {
+		    var r = safeColors[rand()];
+		    var g = safeColors[rand()];
+		    var b = safeColors[rand()];
+		    return "#"+r+g+b;
+		};
+
+		    $('.pop').hover(function() {
+		        $('div').each(function() {
+		            $(this).css('background',randomColor());
+
+		        });
+		    });
+
+			    $('.pop').click(function(){
+			    	$(this).toggle('randompop');
+			    });
+
+</script>
+<script>
+
+
+
+		$count = 0;
+
+			$("#counter").html($count);
+
+			 $(".pop:first").click(function(){ // FIRST
+				setInterval(function(){ 
+				$("#counter").html($count);
+				$count=$count+1;
+				},1000); });
+			 $(".pop:last").click(function(){
+				clearInterval($count);
+				});
+			
+</script>
+
+	</body>
+
+</html>
+

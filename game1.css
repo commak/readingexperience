@@ -1,0 +1,37 @@
+html, body { height: 100%; }
+body {
+    margin: 0;
+
+    overflow: hidden;
+}
+
+.moving-zone {
+    position: absolute;
+    top:65%; left:55%;
+    width:100px; height:120px;
+    margin: -50px 0 0 -150px;
+    perspective: 400px;
+}
+.popup {
+    position: absolute;
+    top:50%;
+    left:30%;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    background: #009FE3;
+   
+}
+.popup:before {
+    content: '';
+    position: absolute;
+    left:5%; top:5%;
+    width:90%; height:90%;
+    border-radius: inherit;
+    background: rgba(0,0,0,.1);
+    box-shadow: 0 0 40px 20px rgba(0,0,0,.2);
+    transform: translateZ(-100px);
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Game 1 </title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+		<meta charset=utf-8 />
+	</head>
+
+
+
+<link rel="stylesheet" href="game1.css">
+
+	<body>
+
+<div class="moving-zone">
+    <div class="popup">
+           
+        </div>
+    </div>
+</div>
+
+
+<script>
+	var moveForce = 50; // max popup movement in pixels
+var rotateForce = 20; // max popup rotation in deg
+
+$(document).mousemove(function(e) {
+    var docX = $(document).width();
+    var docY = $(document).height();
+    
+    var moveX = (e.pageX - docX/5) / (docX/5) * -moveForce;
+    var moveY = (e.pageY - docY/4) / (docY/4) * -moveForce;
+    
+    var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
+    var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+    
+    $('.popup')
+        .css('left', moveX+'px')
+        .css('top', moveY+'px')
+        .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
+});
+</script>
+	</body>
+
+
+</html>

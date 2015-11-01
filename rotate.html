@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	
+		<title> Rotate </title>
+	
+
+	</head>
+
+
+<link rel="stylesheet" href="rotate_style.css">
+
+<style>
+
+</style>
+
+	<body>
+
+		<div id="stage">
+			<div class="shape circle"></div>
+			<div class="shape triangle"></div>
+			<div class="shape square"></div>
+			<div class="shape pentagon"></div>
+			<div class="shape hexagon"></div>
+			
+		</div>
+			<div id="TextBox"></div>
+
+
+<script>
+
+// $text1 = 'this is my essay 1'; //text
+// $text2 = 'does this work 2';
+// $text3 = 'ok 3';
+// $text4 = 'hello 4';
+// $text5 = 'goodnight 5'
+
+$(".shape").click(function(){ //any shape 
+	//$( this ).toggleClass( "no-rotate" ); //shape is paused when shape is clicked
+		$("#stage").addClass( "shrink"); //the container is shrinked 
+		//$("#TextBox").html($text1); // first text is revelead despise which shape is clicked, it will be in order
+
+});
+
+				$(".circle").click(function() {
+				    $(this).toggleClass('circleMenu rotate').siblings().addClass('no-rotate').removeClass('rotate');
+				    $("#TextBox").load("text1.html");
+					    if($(".circle").hasClass("circleMenu")){
+		            	$(".triangle, .square, .pentagon").removeClass("triangleMenu , squareMenu , pentagonMenu");
+			            }
+				});
+
+			
+							  
+ 		//				if ($(".circle").hasClass("circleMenu")) {
+         //       $(this).removeClass("circleMenu").addClass("circle");
+
+          //  } else {
+          //      $(this).toggleClass("circleMenu");
+            
+	            $(".triangle").click(function(){ //2nd text
+	            	$(this).toggleClass('triangleMenu rotate').siblings().addClass('no-rotate').removeClass('rotate');
+				    $("#TextBox").load("text2.html");
+			            if($(".triangle").hasClass("triangleMenu")){
+			            $(".circle, .square").removeClass("circleMenu , squareMenu");
+			            }
+				    
+				});
+
+
+
+	            $(".square").click(function() {
+				    $(this).toggleClass('squareMenu rotate').siblings().addClass('no-rotate').removeClass('rotate');
+				    $("#TextBox").load("text3.html");
+					    if($(".square").hasClass("squareMenu")){
+		            	$(".circle, .triangle").removeClass("circleMenu , triangleMenu");
+			            }
+				});
+
+
+				$(".pentagon").click(function() {
+				    $(this).toggleClass('pentagonMenu rotate').removeClass('no-rotate').siblings().addClass('no-rotate').removeClass('rotate');
+				    $("#TextBox").load("text4.html");
+					    if($(".pentagon").hasClass("pentagonMenu")){
+		            	$(".circle, .triangle, .square").removeClass("circleMenu , triangleMenu, squareMenu");
+			            }
+				});
+
+
+				$(".hexagon").click(function() {
+				    $(this).toggleClass('shrinkh rotate').siblings().addClass('no-rotate').removeClass('rotate');
+				    $("#TextBox").load("text5.html");
+					    if($(".hexagon").hasClass("shrinkh")){
+		            	$(".circle, .triangle, .square, .pentagon").removeClass("circleMenu , triangleMenu, squareMenu , pentagonMenu");
+			            }
+
+				});
+
+			//	$(".triangle").click(function(){ //2nd text
+			//		$(this).toggleClass("triangleMenu no-rotate");
+			//			if($(this).hasClass("triangleMenu")){
+			//				$(".shape").toggleClass("no-rotate");
+			//								}else {
+			//									$(".triangle").removeClass("triangleMenu no-rotate");
+			//									$(".shape").addClass("no-rotate");
+			//				    $("#TextBox").html($text2);
+			//	}
+		//	});
+
+
+      
+
+
+
+
+</script>
+
+
+
+	</body>
+
+</html>

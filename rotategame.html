@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	
+		<title> Rotate  Game : Menu </title>
+	
+
+	</head>
+
+
+<link rel="stylesheet" href="rotate_style.css">
+
+<style>
+
+</style>
+
+	<body>
+
+		<div id="stage">
+			<div class="shape circle"></div>
+			<div class="shape triangle" class="no-rotate"></div>
+			<div class="shape square"></div>
+			<div class="shape pentagon"></div>
+			<div class="shape hexagon"></div>
+			
+		</div>
+			<div id="TextBox"></div>
+
+
+<script>
+
+$text1 = 'this is my essay 1'; //text
+$text2 = 'does this work 2';
+$text3 = 'ok 3';
+$text4 = 'hello 4';
+$text5 = 'goodnight 5'
+
+$(".shape").click(function(){ //any shape 
+	$( this ).toggleClass( "no-rotate" ); //shape is paused when shape is clicked
+		$("#stage").addClass( "shrink"); //the container is shrinked 
+	
+
+
+			$("#TextBox").html($text1); // first text is revelead despise which shape is clicked, it will be in order
+
+			//	$(".square").click(function(){
+			//		$("#TextBox").html($text3);
+			//	})
+
+
+
+   
+});
+				$(".circle").click(function(){
+					$(this).toggleClass( "circleMenu");
+						if($(this).hasClass("circleMenu")){
+							$(".shape").toggleClass("no-rotate");
+											} else {
+												$(".shape").addClass("no-rotate")
+											}
+						 $("#TextBox").html($text1);
+					        });
+							  
+ 		//				if ($(".circle").hasClass("circleMenu")) {
+         //       $(this).removeClass("circleMenu").addClass("circle");
+
+          //  } else {
+          //      $(this).toggleClass("circleMenu");
+            
+            
+          		
+
+				$(".triangle").click(function(){ //2nd text
+					$(this).toggleClass("triangleMenu no-rotate");
+						if($(this).hasClass("triangleMenu")){
+							$(".shape").toggleClass("no-rotate counterrotate");
+											}else {
+												$(".triangle").removeClass("triangleMenu no-rotate");
+												//$(".shape").addClass("no-rotate");
+							    $("#TextBox").html($text2);
+				}
+			});
+
+				$(".square").click(function(){ //3rd
+					$(this).toggleClass( "squareMenu no-rotate");
+						if($(this).hasClass("squareMenu")){
+							$(".shape").removeClass("no-rotate");
+											
+					    $("#TextBox").html($text3);
+							    }
+							});
+
+
+			    $(".pentagon").click(function(){ //4th
+			    	$(".shape").toggleClass("no-rotate");
+			    $("#TextBox").html($text4);
+			    });
+
+			    $(".hexagon").click(function(){ //5h
+			    	$(".shape").toggleClass("counterrotate");
+			    $("#TextBox").html($text5);
+			    });
+
+
+
+      
+
+
+
+
+</script>
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <style>
+ .ball{
+ 	width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background: #E6007E;
+    position: absolute;
+    top:25%;
+    left:70px;
+    margin:auto;
+
+}
+</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(function () {
+    toggle=1;
+	function bounce(){	
+            if(toggle == 1){
+                $(".ball").animate({top:'-=50px'}, 500); 
+                toggle = 0;
+            }else{
+                $(".ball").animate({top:'+=50px'},500); 
+                toggle = 1;
+            }
+        }
+		setInterval(bounce, 100);
+});
+</script>
+</head>
+<body>
+<div class="ball"></div>
+</body>
+</html>

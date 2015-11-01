@@ -1,0 +1,509 @@
+@-webkit-keyframes rotate {
+    100% { -webkit-transform:rotate(360deg); }
+}
+@-moz-keyframes rotate {
+    100% { -moz-transform:rotate(360deg); }
+}
+@-o-keyframes rotate {
+    100% { -o-transform:rotate(360deg); }
+}
+@-ms-keyframes rotate {
+    100% { -ms-transform:rotate(360deg); }
+}
+@keyframes rotate {
+    100% { transform:rotate(360deg); }
+}
+@keyframes counterrotate {
+    100% { transform:rotate(-360deg); }
+}
+
+@font-face { font-family: myFont; src: url('CircularStd-Book.otf'); } 
+.circle{
+ 	width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background: #E6007E;
+    position: absolute;
+    top:27%;
+    left:70px;
+    margin:auto;
+
+}
+.circleBall{ 
+	width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    background: #E6007E;
+    position: absolute;
+    top:27%;
+    left:70px;
+	  /*  -webkit-animation-name: rotate;
+		-moz-animation-name: rotate;
+		-ms-animation-name: rotate;
+		-o-animation-name: rotate;    
+		animation-name: rotate;
+
+		-webkit-animation-duration: 4s;
+		-moz-animation-duration: 4s;
+		-ms-animation-duration: 4s;
+		-o-animation-duration: 4s;
+		animation-duration: 4s;
+		    
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;    
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-o-animation-timing-function: linear;    
+		animation-timing-function: linear; */
+ }
+
+
+.triangle {
+	width: 0; 
+	height: 100; 
+	border-left: 80px solid transparent; 
+	border-right: 80px solid transparent; 
+	border-bottom: 160px solid #F39200; 
+	position: absolute;
+    top:25%;
+    left:290px;  
+    z-index:1;
+    
+		-webkit-animation-name: rotate;
+		-moz-animation-name: rotate;
+		-ms-animation-name: rotate;
+		-o-animation-name: rotate;    
+		animation-name: rotate;
+
+		-webkit-animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		-ms-animation-duration: 2s;
+		-o-animation-duration: 2s;
+		animation-duration: 2s;
+		    
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;    
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-o-animation-timing-function: linear;    
+		animation-timing-function: linear;
+ 
+    
+}
+.square {
+	width: 140px;
+    height: 140px;
+    background: #FFDE00;
+    position: absolute;
+    top:25%;
+    left:530px;
+	z-index:4;
+    
+		-webkit-animation-name: counterrotate;
+		-moz-animation-name: counterrotate;
+		-ms-animation-name: counterrotate;
+		-o-animation-name: counterrotate;    
+		animation-name: counterrotate;
+
+		-webkit-animation-duration: 2s;
+		-moz-animation-duration: 2s;
+		-ms-animation-duration: 2s;
+		-o-animation-duration: 2s;
+		animation-duration: 2s;
+		    
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;    
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-o-animation-timing-function: linear;    
+		animation-timing-function: linear;
+
+
+ 
+    
+}
+
+.pentagon{ 
+	width: 108px; 
+	border-width: 100px 36px 0; 
+	border-style: solid; 
+	border-color: #91C998 transparent; 
+	position: absolute;
+    top:37%;
+    left:758px;
+    z-index:4;
+
+		-webkit-animation-name: rotate;
+		-moz-animation-name: rotate;
+		-ms-animation-name: rotate;
+		-o-animation-name: rotate;    
+		animation-name: rotate;
+
+		-webkit-animation-duration: 4s;
+		-moz-animation-duration: 4s;
+		-ms-animation-duration: 4s;
+		-o-animation-duration: 4s;
+		animation-duration: 4s;
+		    
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;    
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-o-animation-timing-function: linear;    
+		animation-timing-function: linear;
+
+
+ 
+    
+}
+.pentagon:before { 
+	content: ""; 
+	position: absolute; 
+	height: 0; width: 0; 
+	top: -170px; left: -36px; 
+	border-width: 0 90px 70px; 
+	border-style: solid; 
+	border-color: transparent transparent #91C998; 
+} 
+.hexagon{ 
+	width: 150px; 
+	height: 82.5px; 
+	background: #009FE3; 
+	position: absolute;
+    top:38%;
+    left:1000px;
+	    -webkit-animation-name: counterrotate;
+		-moz-animation-name: counterrotate;
+		-ms-animation-name: counterrotate;
+		-o-animation-name: counterrotate;    
+		animation-name: counterrotate;
+
+		-webkit-animation-duration: 2.5s;
+		-moz-animation-duration: 2.5s;
+		-ms-animation-duration: 2.5s;
+		-o-animation-duration: 2.5s;
+		animation-duration: 2.5s;
+		    
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;    
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-o-animation-timing-function: linear;    
+		animation-timing-function: linear;
+} 
+.hexagon:before { 
+	content: ""; 
+	position: absolute; 
+	top: -37.5px; 
+	left: 0; 
+	width: 0; 
+	height: 0; 
+	border-left: 75px solid transparent; 
+	border-right: 75px solid transparent; 
+	border-bottom: 38.5px solid #009FE3; 
+} 
+.hexagon:after { 
+	content: ""; 
+	position: absolute; 
+	bottom: -37.5px; 
+	left: 0; 
+	width: 0; 
+	height: 0; 
+	border-left: 75px solid transparent; 
+	border-right: 75px solid transparent; 
+	border-top: 38.5px solid #009FE3; 
+}
+
+
+#stage {
+    outline:1px #ccc ;
+
+	position:absolute;
+	top:200px;
+	height:250px; 
+	transition:all 0.5s;
+	transform-origin: 50% 0%; /* Chrome, Safari, Opera */
+	-webkit-transform-origin: 50% 0%; /* Chrome, Safari, Opera */	
+
+}
+
+#stage.shrink{
+	position:static;
+	top:0px;
+	transform: scale(0.3); /* Standard syntax */
+
+}
+
+.shape:hover {
+   -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+   animation-play-state: paused;
+}
+
+.no-rotate{
+   -webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+    animation-play-state: paused;
+
+}
+.rotate{
+	 -webkit-animation-play-state: running; /* Chrome, Safari, Opera */
+    animation-play-state: running;
+}
+.no-rotate:hover {
+	   -webkit-animation-play-state: running; /* Chrome, Safari, Opera */
+    animation-play-state: running;
+}
+.counterrotate {
+	animation-name:counterrotate;
+}
+
+.circleMenu{
+	width: 100px;
+    height: 100px;
+    background: white;
+    position: absolute;
+    top:25%;
+    left:70px;
+    border:15px #E6007E solid;
+}
+
+.triangleMenu{
+	width: 0; 
+	height: 100; 
+	border-left: 60px solid transparent; 
+	border-right: 60px solid transparent; 
+	border-bottom: 120px solid #F39200; 
+	position: absolute;
+    top:25%;
+    left:290px;  
+    z-index:3;
+
+}
+
+.squareMenu{
+	width: 110px;
+    height: 110px;
+    background: white;
+    position: absolute;
+    top:25%;
+    left:530px;
+    border:15px #FFDE00 solid;
+
+}
+
+.pentagonMenu{ 
+	width: 108px; 
+	border-width: 100px 36px 0; 
+	border-style: solid; 
+	border-color: #91C998 transparent; 
+	position: absolute;
+    top:37%;
+    left:758px;
+    z-index:4;
+    transform: scale(0.6);
+
+		-webkit-animation-name: rotate;
+		-moz-animation-name: rotate;
+		-ms-animation-name: rotate;
+		-o-animation-name: rotate;    
+		animation-name: rotate;
+
+		-webkit-animation-duration: 4s;
+		-moz-animation-duration: 4s;
+		-ms-animation-duration: 4s;
+		-o-animation-duration: 4s;
+		animation-duration: 4s;
+		    
+		-webkit-animation-iteration-count: infinite;
+		-moz-animation-iteration-count: infinite;
+		-ms-animation-iteration-count: infinite;
+		-o-animation-iteration-count: infinite;    
+		animation-iteration-count: infinite;
+
+		-webkit-animation-timing-function: linear;
+		-moz-animation-timing-function: linear;
+		-ms-animation-timing-function: linear;
+		-o-animation-timing-function: linear;    
+		animation-timing-function: linear;
+
+
+ 
+    
+}
+.pentagonMenu:before { 
+	content: ""; 
+	position: absolute; 
+	height: 0; width: 0; 
+	top: -170px; left: -36px; 
+	border-width: 0 90px 70px; 
+	border-style: solid; 
+	border-color: transparent transparent #91C998; 
+	transform: scale(0.6);
+} 
+
+.hexagon.shrinkh{
+	transform: scale(0.5);
+
+}
+
+#TextBox{
+	width:100%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+}
+
+.paragraph{
+	width:700px;
+	height:1700px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+}
+.paragraph2{
+	width:700px;
+	height:1700px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:2000px;
+}
+.paragraph3{
+	width:700px;
+	height:1600px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:4000px;
+}
+.paragraph4{
+	width:700px;
+	height:1450px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:6100px;
+}
+.paragraph5{
+	width:700px;
+	height:1150px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:8100px;
+}
+.paragraph6{
+	width:700px;
+	height:1000px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:9760px;
+}
+
+.GameBox1{
+	width:100%;
+	height:1000px;
+	position: absolute;
+	top:1550px;
+}
+
+.GameBox2{
+	width:100%;
+	position: absolute;
+	top:3700px;
+}
+.GameBox3{
+	width:100%;
+	position: absolute;
+	top:5400px;
+	z-index: -3;
+}
+.GameBox4{
+	width:100%;
+	position: absolute;
+	top:7480px;
+	z-index: 4;
+}
+.GameBox5{
+	width:100%;
+	position: absolute;
+	top:9240px;
+}
+
+.text1{
+	font-family: Adobe Caslon Pro;
+	font-size:19px;
+	line-height: 32px;
+	text-align: left;
+	color: grey;
+
+
+}
+.text2{
+			font-family: Gotham;
+			src:url (Gotham.otf);
+			font-size:20px;
+			line-height: 32px;
+			text-align:justify;
+			color: grey;
+		}
+.title{
+	font-family: Montserrat;
+	font-weight: bold;
+	font-size:29px;
+	line-height: 10px;
+	text-align: center;
+}
+
+.author{
+	font-family: myFont;
+	font-weight: black;
+	font-size:13px;
+	line-height: 40px;
+	text-align: center;
+}
+
+body{
+	background:#FEFDFF;
+}

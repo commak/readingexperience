@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<script src="paper.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/paperscript" canvas="myCanvas">
+
+
+
+tool.minDistance = 10;
+tool.maxDistance = 100;
+
+
+function onMouseDrag(event) {
+	var x = event.middlePoint.x;
+	var y = event.middlePoint.y;
+	var radius = event.delta.length / 2;
+	var color = randomColor();
+	drawCircle (x, y, radius, color );
+	emitCircle ( x, y, radius, color);
+//	var circle = new Path.Circle(event.middlePoint, radius);
+//	circle.fillColor = 'red';
+}
+function drawCircle( x, y, radius, color ) {
+    // Render the circle with Paper.js
+    var circle = new Path.Circle( new Point( x, y ), radius );
+    circle.fillColor = new RgbColor( color.red, color.blue, color.green, color.alpha );
+    // Refresh the view, so we always get an update, even if the tab is not in focus
+    view.draw();
+} 
+ 
+function emitCircle( x, y, radius, color ) {
+    // We'll do something interesting with this shortly...
+}
+function randomColor() {
+    return {
+        red: 1,
+        green: Math.random(),
+        blue: Math.random(),
+        alpha: ( Math.random() * 0.25 ) + 0.25
+    };
+}
+
+// var circlePath = new Path.Circle(new Point(50, 50), 25);
+// circlePath.fillColor = 'black'
+
+// function onMouseMove(event) {
+// 	circlePath.position = event.point;
+// }
+
+
+
+		</script>
+	</head>
+	
+
+	<body>
+		<canvas id="myCanvas"  width="1270%" height="1300px"></canvas>
+		
+
+
+		
+	</body>
+
+</html>
+

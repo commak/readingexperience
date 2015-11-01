@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<title> Rotate </title>
+	
+
+	</head>
+
+
+<link rel="stylesheet" href="rotate2_style.css">
+
+<style>
+
+</style>
+
+	<body>
+
+		<div id="stage">
+			<div class="shape circleBall"></div>
+			<div class="shape triangle"></div>
+			<div class="shape square"></div>
+			<div class="shape pentagon"></div>
+			<div class="shape hexagon"></div>
+		</div>
+			<div id="TextBox"></div>
+
+
+<script>
+
+// $text1 = 'this is my essay 1'; //text
+// $text2 = 'does this work 2';
+// $text3 = 'ok 3';
+// $text4 = 'hello 4';
+// $text5 = 'goodnight 5'
+$(function () {
+    toggle=1;
+	function bounce(){	
+            if(toggle == 1){
+                $(".circleBall").animate({top:'-=50px'}, 600, 'swing'); 
+                toggle = 0;
+            }else{
+                $(".circleBall").animate({top:'+=50px'},600, 'linear'); 
+                toggle = 1;
+            }
+        }
+		setInterval(bounce, 100);
+});
+
+
+$(".shape").click(function(){ //any shape 
+	//$( this ).toggleClass( "no-rotate" ); //shape is paused when shape is clicked
+		$("#stage").addClass( "shrink"); //the container is shrinked 
+		//$("#TextBox").html($text1); // first text is revelead despise which shape is clicked, it will be in order
+
+});
+
+				$(".circleBall").click(function() {
+				    $(this).toggleClass('circleMenu circle').addClass('circleBall').siblings().addClass('no-rotate').removeClass('rotate');
+				    $("#TextBox").load("text12.html");
+
+					    if($(".circleBall").hasClass("circleMenu")){
+		            	$(".triangle, .square, .pentagon").removeClass("triangleMenu squareMenu pentagonMenu hexagonMenu");
+			            };
+			          
+				});
+
+						$(".circleBall").click(function() {
+							if($(".triangle").hasClass("no-rotate")){
+							$(this).removeClass("triangleMenu");
+						};
+					});
+		
+							  
+ 		//				if ($(".circle").hasClass("circleMenu")) {
+         //       $(this).removeClass("circleMenu").addClass("circle");
+
+          //  } else {
+          //      $(this).toggleClass("circleMenu");
+            
+	            $(".triangle").click(function(){ //2nd text
+	            	$(this).toggleClass('triangleMenu rotate').siblings().addClass('no-rotate').removeClass('rotate circleMenu');
+	            	$(".circleBall").clearQueue();
+	            	$(".circleBall").addClass('circle');
+				    $("#TextBox").load("text2.html");
+			            if($(".triangle").hasClass("triangleMenu")){
+			            $(".circleBall, .circle, .square, .pentagon").removeClass("circleBall squareMenu pentagonMenu hexagonMenu");
+
+			           
+			            //$(".square").removeClass("squareMenu");
+			            }
+				    
+				});
+
+
+
+	            $(".square").click(function() {
+				    $(this).toggleClass('squareMenu rotate').siblings().addClass('no-rotate').removeClass('rotate circleMenu');
+				    $(".circleBall").clearQueue();
+	            	$(".circleBall").addClass('circle');
+				    $("#TextBox").load("text3.html");
+					    if($(".square").hasClass("squareMenu")){
+		            	$(".circleBall, .triangle, .pentagon, .hexagon").removeClass("circleBall triangleMenu pentagonMenu shrinkh");
+			            }
+				});
+
+
+				$(".pentagon").click(function() {
+				    $(this).toggleClass('pentagonMenu rotate').siblings().addClass('no-rotate').removeClass('rotate circleMenu');
+				    $(".circleBall").clearQueue();
+	            	$(".circleBall").addClass('circle');
+				    $("#TextBox").load("text4.html");
+					    if($(".pentagon").hasClass("pentagonMenu")){
+		            	$(".circleBall, .triangle, .square, .hexagon").removeClass("circleBall triangleMenu squareMenu shrinkh");
+			            }
+				});
+
+
+				$(".hexagon").click(function() {
+				    $(this).toggleClass('shrinkh rotate').siblings().addClass('no-rotate').removeClass('rotate circleMenu');
+				    $(".circleBall").clearQueue();
+	            	$(".circleBall").addClass('circle');
+				    $("#TextBox").load("text5.html");
+					    if($(".hexagon").hasClass("shrinkh")){
+		            	$(".circleBall, .triangle, .square, .pentagon").removeClass("circleBall triangleMenu squareMenu pentagonMenu");
+			            }
+
+				});
+
+			//	$(".triangle").click(function(){ //2nd text
+			//		$(this).toggleClass("triangleMenu no-rotate");
+			//			if($(this).hasClass("triangleMenu")){
+			//				$(".shape").toggleClass("no-rotate");
+			//								}else {
+			//									$(".triangle").removeClass("triangleMenu no-rotate");
+			//									$(".shape").addClass("no-rotate");
+			//				    $("#TextBox").html($text2);
+			//	}
+		//	});
+
+
+      
+
+
+
+
+</script>
+
+
+
+	</body>
+
+</html>

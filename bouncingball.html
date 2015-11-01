@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bouncing Ball Animation in jQuery</title>
+
+    <script type="text/javascript" src="jquery-1.3.2.js"></script>
+
+    <script type="text/javascript">
+
+        /* Entry point into the animation 'loop'. Once the the animation is complete
+           i.e. the ball is at the top, the animate call the callback function animDown */          
+        function animUp() {
+            $("#ball").animate({ top: "1px" }, "slow", "swing", animDown);
+        }
+
+        /* Called when the up animation completes. Once this downanimation is complete
+           i.e. the ball is at the bottom, the animate function calls the callback function
+           animUp */
+        function animDown() {
+            $("#ball").animate({ top: "446px" }, "slow", "swing", animUp);
+        }
+
+   
+        $(document).ready(function() {
+            animUp();
+        });
+       
+    </script>
+
+</head>
+<body>
+    <div><h1>Bouncing Ball Animation in jQuery</h1></div>
+   
+    <div id="ballContainer" style="width: 500px; height: 500px; display:block;
+        background-color: White; border-bottom: solid 10px Black;">
+       
+        <div id="ball" style="position: relative; overflow: hidden;
+            background-color: Transparent; color: Black; font-size: 50pt;
+            top: 450px; left: 225px;">
+            O
+        </div>
+       
+    </div>
+    <h4>from: <a href="http://www.dontcodetired.com" title="Don't Code Tired">Don't Code Tired</a></h4>
+</body>
+</html>

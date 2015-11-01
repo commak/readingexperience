@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	
+		<title> Rotate </title>
+	
+
+	</head>
+
+
+<link rel="stylesheet" href="rotate_style.css">
+
+<style>
+
+</style>
+
+	<body>
+
+		<div id="stage">
+			<div class="shape circle"></div>
+			<div class="shape triangle" class="no-rotate"></div>
+			<div class="shape square"></div>
+			<div class="shape pentagon"></div>
+			<div class="shape hexagon"></div>
+			
+		</div>
+			<div id="essayText1"></div>
+
+
+
+<script>
+
+$text1 = 'do you even work?'; //text
+$text2 = 'This is the essay.';
+
+$(".shape").click(function(){ //any shape 
+	$( this ).toggleClass( "no-rotate" ); //shape is paused when mouse is on
+	$("#stage").addClass( "shrink"); //the container is shrinked 
+
+
+$(".shape.triangle").click(function(){
+			$("#essayText1").html($text1); //id of the first text revealed when a shape is clicked
+
+			
+
+$(".shape.circle").click(function(){
+
+			$("#essayText1").html($text2); //id of the first text revealed when a shape is clicked
+
+	$(".square").click(function(){
+		
+	})
+	animate({borderWidth: "10px"});
+	});
+});
+
+
+
+});
+});
+})
+
+</script>
+
+	</body>
+
+</html>

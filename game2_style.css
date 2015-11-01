@@ -1,0 +1,35 @@
+
+.wrapper {
+    position: relative;
+    width: 15%;
+    margin: 90px 51%;
+}
+.wrapper:after {
+    padding-top: 100%; /*1:1 ratio*/
+    display: block;
+    content: '';
+}
+.circle {
+    position: absolute;
+    top: 0; bottom: 0; right: 150px; left: -150px; 
+    border-radius: 1000px;
+    background-color: #E6007E;
+
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+}
+
+.circle:hover {
+  background: #FFDE00;
+    -webkit-box-shadow: -5px 5px 35px #999;
+    -moz-box-shadow: -5px 5px 35px #999;
+    o-box-shadow: -5px 5px 35px #999;
+    box-shadow: -5px 5px 125px #999;
+    
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+}
