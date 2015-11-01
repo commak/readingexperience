@@ -37,25 +37,17 @@ $(function () {
 		isBouncing = 1;
     toggle=1;
 	function bounce(){
-					if (isBouncing == 1) {
-            if(toggle == 1){
-                $(".circleBall").animate({top:'-=50px'}, 600, 'swing');
-                toggle = 0;
-            }else{
-                $(".circleBall").animate({top:'+=50px'},600, 'linear');
-                toggle = 1;
-            }
-					} else {
-						$('.circleBall').stop();
-					}
+			if (!$('.circleBall').hasClass('no-rotate')) {
+        if(toggle == 1){
+            $(".circleBall").animate({top:'-=50px'}, 600, 'swing');
+            toggle = 0;
+        }else{
+            $(".circleBall").animate({top:'+=50px'},600, 'linear');
+            toggle = 1;
         }
+			}
+	 	}
 		setInterval(bounce, 600);
-
-		$('.circleBall').hover(function() {
-			isBouncing = 0;
-		}, function() {
-			isBouncing = 1;
-		})
 });
 
 
