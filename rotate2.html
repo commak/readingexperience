@@ -35,9 +35,10 @@
 // $text5 = 'goodnight 5'
 $(function () {
 		isBouncing = 1;
+		isBouncing2 = 0;
     toggle=1;
 	function bounce(){
-			if (!$('.circleBall').hasClass('no-rotate')) {
+			if ((!$('.circleBall').hasClass('no-rotate') && isBouncing == 1) || (isBouncing == 0 && isBouncing2 == 1)) {
         if(toggle == 1){
             $(".circleBall").animate({top:'-=50px'}, 600, 'swing');
             toggle = 0;
@@ -47,7 +48,14 @@ $(function () {
         }
 			}
 	 	}
+		bounce();
 		setInterval(bounce, 600);
+
+		$('.circleBall').hover(function() {
+			isBouncing = 0;
+		}, function() {
+			isBouncing = 1;
+		});
 });
 
 
@@ -55,7 +63,7 @@ $(".shape").click(function(){ //any shape
 	//$( this ).toggleClass( "no-rotate" ); //shape is paused when shape is clicked
 		$("#stage").addClass( "shrink"); //the container is shrinked
 		//$("#TextBox").html($text1); // first text is revelead despise which shape is clicked, it will be in order
-
+		isBouncing2 = 1;
 });
 
 				$(".circleBall").click(function() {
