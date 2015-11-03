@@ -37,29 +37,6 @@
     position: absolute;
     top:27%;
     left:70px;
-	  /*  -webkit-animation-name: rotate;
-		-moz-animation-name: rotate;
-		-ms-animation-name: rotate;
-		-o-animation-name: rotate;    
-		animation-name: rotate;
-
-		-webkit-animation-duration: 4s;
-		-moz-animation-duration: 4s;
-		-ms-animation-duration: 4s;
-		-o-animation-duration: 4s;
-		animation-duration: 4s;
-		    
-		-webkit-animation-iteration-count: infinite;
-		-moz-animation-iteration-count: infinite;
-		-ms-animation-iteration-count: infinite;
-		-o-animation-iteration-count: infinite;    
-		animation-iteration-count: infinite;
-
-		-webkit-animation-timing-function: linear;
-		-moz-animation-timing-function: linear;
-		-ms-animation-timing-function: linear;
-		-o-animation-timing-function: linear;    
-		animation-timing-function: linear; */
  }
 
 
@@ -311,7 +288,7 @@
     position: absolute;
     top:25%;
     left:530px;
-    border:15px #FFDE00 solid;
+    border:20px #FFDE00 solid;
 
 }
 
@@ -324,8 +301,6 @@
     top:37%;
     left:758px;
     z-index:4;
-    transform: scale(0.6);
-
 		-webkit-animation-name: rotate;
 		-moz-animation-name: rotate;
 		-ms-animation-name: rotate;
@@ -362,7 +337,6 @@
 	border-width: 0 90px 70px; 
 	border-style: solid; 
 	border-color: transparent transparent #91C998; 
-	transform: scale(0.6);
 } 
 
 .hexagon.shrinkh{
@@ -400,6 +374,36 @@
 	right: 0;
 	top:2000px;
 }
+.paragraph21{
+	width:700px;
+	height:1700px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:2300px;
+}
+.paragraph22{
+	width:700px;
+	height:1700px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:2450px;
+}
+.paragraph23{
+	width:700px;
+	height:1100px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:6350px;
+}
 .paragraph3{
 	width:700px;
 	height:1600px;
@@ -409,6 +413,36 @@
 	left: 0;
 	right: 0;
 	top:4000px;
+}
+.paragraph31{
+	width:700px;
+	height:1600px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:5600px;
+}
+.paragraph32{
+	width:700px;
+	height:1700px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:2200px;
+}
+.paragraph33{
+	width:700px;
+	height:1100px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:4500px;
 }
 .paragraph4{
 	width:700px;
@@ -420,6 +454,27 @@
 	right: 0;
 	top:6100px;
 }
+.paragraph42{
+	width:700px;
+	height:1450px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:2600px;
+	z-index:-15;
+}
+.paragraph43{
+	width:700px;
+	height:1450px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top:5150px;
+}
 .paragraph5{
 	width:700px;
 	height:1150px;
@@ -430,46 +485,74 @@
 	right: 0;
 	top:8100px;
 }
-.paragraph6{
+.paragraph52{
 	width:700px;
-	height:1000px;
+	height:1150px;
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	top:9760px;
+	top:3050px;
 }
+
 
 .GameBox1{
 	width:100%;
-	height:1000px;
+
 	position: absolute;
-	top:1550px;
+	top:1600px;
 }
 
 .GameBox2{
 	width:100%;
+	height:400px;
 	position: absolute;
-	top:3700px;
+	top:1830px;
 }
 .GameBox3{
 	width:100%;
 	position: absolute;
-	top:5400px;
+	top:4900px;
 	z-index: -3;
 }
 .GameBox4{
 	width:100%;
 	position: absolute;
-	top:7480px;
+	top:1880px;
 	z-index: 4;
 }
 .GameBox5{
 	width:100%;
 	position: absolute;
-	top:9240px;
+	top:5550px;
+	z-index: 4;
 }
+.GameBox6{
+	width:100%;
+	position: absolute;
+	top:2400px;
+	z-index: 4;
+}
+.GameBox7{
+	width:100%;
+	position: absolute;
+	top:1900px;
+	z-index: -3;
+}
+.GameBox8{
+	width:100%;
+	position: absolute;
+	top:4600px;
+	z-index:10;
+}
+.GameBox9{
+	width:100%;
+	position: absolute;
+	top:3700px;
+	z-index:-10;
+}
+
 
 .text1{
 	font-family: Adobe Caslon Pro;
@@ -480,14 +563,6 @@
 
 
 }
-.text2{
-			font-family: Gotham;
-			src:url (Gotham.otf);
-			font-size:20px;
-			line-height: 32px;
-			text-align:justify;
-			color: grey;
-		}
 .title{
 	font-family: Montserrat;
 	font-weight: bold;
@@ -503,6 +578,69 @@
 	line-height: 40px;
 	text-align: center;
 }
+.sidenoteleft{
+	position:absolute;
+	left:30px;
+	width:245px;
+	text-align: right;
+	font-family: Adobe Caslon Pro;
+	font-size:14px;
+	line-height: 23px;
+	opacity:0.7;
+	color: grey;
+}
+.sidenoteright{
+	position:absolute;
+	right:45px;
+	width:220px;
+	text-align: left;
+	font-family: Adobe Caslon Pro;
+	font-size:14px;
+	line-height: 23px;
+	opacity:0.7;
+	color: grey;
+}
+.bottomline{
+	position:absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	font-family: Montserrat;
+	font-size:40px;
+	line-height: 25px;
+	color:  #FFDE00;
+	text-align: center;
+}
+a.text12 {color:#E6007E;}
+a.text12:link  {text-decoration: underline; color:  #E6007E;}
+a.text12:hover {text-decoration: underline; color: #F8D244;}
+a.text12:active {text-decoration: none; color: red;}
+
+a.text2 {color:#F39200;}
+a.text2:link  {text-decoration: underline; color:  #F39200;}
+a.text2:hover {text-decoration: underline; color: #FF6082;}
+a.text2:active {text-decoration: none; color: #F54F00;}
+
+a.text3 {color:#F8D244;}
+a.text3:link  {text-decoration: underline; color:  #F8D244;}
+a.text3:hover {text-decoration: underline; color: #8D6BF7;}
+a.text3:active {text-decoration: none; color: #F5B82C;}
+
+a.text4 {color:#91C998;}
+a.text4:link  {text-decoration: underline; color:  #91C998;}
+a.text4:hover {text-decoration: underline; color: #3BBBD8;}
+a.text4:active {text-decoration: none; color: #36A182;}
+
+a.text5 {color:#009FE3;}
+a.text5:link  {text-decoration: underline; color:  #009FE3;}
+a.text5:hover {text-decoration: underline; color: #38FBE9;}
+a.text5:active {text-decoration: none; color: #3966EE;}
+
+a.reference {color:black;}
+a.reference:link { text-decoration: underline; color:black;}
+a.reference:hover { text-decoration: none; color: grey;}
+a.reference:active {text-decoration: none; color: black;}
 
 body{
 	background:#FEFDFF;
