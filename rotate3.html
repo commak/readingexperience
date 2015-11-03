@@ -105,13 +105,13 @@
       setInterval(function() {
         $('.shape-container').each(function() {
           if ((!$(this).hasClass('no-animate') && !$(this).hasClass('circle') && stageSet == 0)
-        || $(this).hasClass('active')) {
+          || (stageSet == 1 && $(this).hasClass('no-animate') && !$(this).hasClass('circle')) || (stageSet == 1 && $(this).hasClass('active') && !$(this).hasClass('circle'))) {
             $(this).transition({
               rotate: '+=1'
             },15);
           }
           if (($(this).hasClass('circle') && !$(this).hasClass('no-animate') && stageSet == 0)
-          || ($(this).hasClass('active') && $(this).hasClass('circle'))) {
+          || (($(this).hasClass('active') && $(this).hasClass('circle') && stageSet == 1)) || (stageSet == 1 && $(this).hasClass('no-animate') && $(this).hasClass('circle'))) {
             var y = $(this).css('y');
             if (y == -(100 * scale) + 'px') {
               bounce = 1;
